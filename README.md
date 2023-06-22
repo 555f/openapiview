@@ -19,13 +19,13 @@ func main() {
     ov := openapiview.NewMiddleware("/docs/api", openapiData) // create http middleware
 
     e := echo.New()
-	e.HideBanner = true
-	e.HidePort = true
+    e.HideBanner = true
+    e.HidePort = true
 
     e.Use(echo.WrapMiddleware(ov.Process))
 
     if err := e.Start(":8080"); err != nil {
-		panic(err)
+        panic(err)
 	}
 }
 ```
