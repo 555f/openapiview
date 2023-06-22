@@ -10,7 +10,7 @@ Example for echo:
 package main
 
 var (
-	//go:embed openapi.yaml
+    //go:embed openapi.yaml
     fs embed.FS
 )
 
